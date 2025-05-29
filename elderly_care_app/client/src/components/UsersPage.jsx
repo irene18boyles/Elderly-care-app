@@ -37,7 +37,7 @@ const UserPage = () => {
   
   const fetchUsers = async () => {
     try {
-      const res = await axios.get('http://localhost:8000/api/contactusers', {
+      const res = await axios.get('https://elderly-care-app.onrender.com/api/contactusers', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('userToken')}`,
         },
@@ -56,7 +56,7 @@ const UserPage = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/contactusers/${id}`, {
+      await axios.delete(`https://elderly-care-app.onrender.com/api/contactusers/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('userToken')}`,
         },
@@ -85,7 +85,7 @@ const UserPage = () => {
 
     try {
       await axios.put(
-        `http://localhost:8000/api/contactusers/${id}`,
+        `https://elderly-care-app.onrender.com/api/contactusers/${id}`,
         {
           isContributor,
           isViewOnly
@@ -128,7 +128,7 @@ const UserPage = () => {
 
     try {
       await axios.put(
-        `http://localhost:8000/api/contactusers/${id}`,
+        `https://elderly-care-app.onrender.com/api/contactusers/${id}`,
         {
           isViewOnly,
           isContributor
@@ -156,7 +156,7 @@ const UserPage = () => {
   const saveEdit = async (id) => {
     try {
       await axios.put(
-        `http://localhost:8000/api/contactusers/${id}`,
+        `https://elderly-care-app.onrender.com/api/contactusers/${id}`,
         {
           fullname: editedName,
           email: editedEmail,

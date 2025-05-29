@@ -35,7 +35,7 @@ export default function UploadMedicalRecordsModal({ onClose, onUpload, canAdd })
     formData.append("category", category);
 
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost:8000/api/medicalrecords/upload");
+    xhr.open("POST", "https://elderly-care-app.onrender.com/api/medicalrecords/upload");
 
     // Add authorization header
     const token = localStorage.getItem("userToken");

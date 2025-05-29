@@ -25,7 +25,7 @@ export default function SignUpForm({setIsLogin}) {
             return;
         }
         try {
-            const response = await axios.post('http://localhost:8000/api/mainusers/register', {
+            const response = await axios.post('https://elderly-care-app.onrender.com/api/mainusers/register', {
                 fullname: formData.fullname,
                 email: formData.email,
                 password: formData.password

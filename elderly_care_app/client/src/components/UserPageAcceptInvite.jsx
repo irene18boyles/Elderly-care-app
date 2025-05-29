@@ -20,7 +20,7 @@ const AcceptInvite = ({ onLogin }) => {
     }
 
     axios
-      .get(`http://localhost:8000/api/contactusers/accept-invite?token=${token}`)
+      .get(`https://elderly-care-app.onrender.com/api/contactusers/accept-invite?token=${token}`)
       .then((res) => {
         const { token, user } = res.data;
 
@@ -57,7 +57,7 @@ const AcceptInvite = ({ onLogin }) => {
       const token = localStorage.getItem("userToken");
       // Set the password
       await axios.post(
-        `http://localhost:8000/api/contactusers/set-password`,
+        `https://elderly-care-app.onrender.com/api/contactusers/set-password`,
         { password: password.trim() },
         {
           headers: {
@@ -68,7 +68,7 @@ const AcceptInvite = ({ onLogin }) => {
       );
 
       // After setting password, get fresh user data
-      const userResponse = await axios.post('http://localhost:8000/api/contactusers/login', {
+      const userResponse = await axios.post('https://elderly-care-app.onrender.com/api/contactusers/login', {
         email: JSON.parse(localStorage.getItem('userInfo')).email,
         password: password.trim()
       });

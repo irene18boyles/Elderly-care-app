@@ -13,7 +13,7 @@ export default function LoginForm({onLogin, setIsLogin}) {
         try {
             // Try admin login first
             try {
-                const adminResponse = await axios.post('http://localhost:8000/api/mainusers/login', {
+                const adminResponse = await axios.post('https://elderly-care-app.onrender.com/api/mainusers/login', {
                     email,
                     password,
                 });
@@ -25,7 +25,7 @@ export default function LoginForm({onLogin, setIsLogin}) {
             } catch (adminError) {
                 // If admin login fails with 400, try family/caregiver login
                 if (adminError.response?.status === 400) {
-                    const contactResponse = await axios.post('http://localhost:8000/api/contactusers/login', {
+                    const contactResponse = await axios.post('https://elderly-care-app.onrender.com/api/contactusers/login', {
                         email,
                         password,
                     });

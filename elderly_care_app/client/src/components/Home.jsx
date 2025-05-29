@@ -59,7 +59,7 @@ export default function Home() {
 
     const fetchSymptoms = async () => {
       const token = localStorage.getItem("userToken");
-      const res = await axios.get("http://localhost:8000/api/symptoms", {
+      const res = await axios.get("https://elderly-care-app.onrender.com/api/symptoms", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -78,7 +78,7 @@ export default function Home() {
 
     const fetchMedications = async () => {
       const token = localStorage.getItem("userToken");
-      const res = await axios.get("http://localhost:8000/api/medications", {
+      const res = await axios.get("https://elderly-care-app.onrender.com/api/medications", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setMedications(res.data);

@@ -26,8 +26,8 @@ const server = http.createServer(app);
 
 // Enable CORS with specific options
 app.use(cors({
-  origin: true,
-  credentials: true
+  origin: ['https://poetic-hotteok-ac8a00.netlify.app'], // update this with your frontend URL
+  credentials: true // if using cookies/auth
 }));
 
 app.use(express.json());

@@ -75,7 +75,7 @@ export default function MedicalRecordsList() {
   useEffect(() => {
     const fetchRecords = async () => {
       try {
-        const res = await fetch("http://localhost:8000/api/medicalrecords/getAllRecords");
+        const res = await fetch("https://elderly-care-app.onrender.com/api/medicalrecords/getAllRecords");
         if (!res.ok) throw new Error("Failed to fetch records");
         const data = await res.json();
         setRecords(data);
@@ -137,7 +137,7 @@ export default function MedicalRecordsList() {
                   View
                 </a>
                 <a
-                  href={`http://localhost:8000/api/medicalrecords/download/${record._id}`}
+                  href={`https://elderly-care-app.onrender.com/api/medicalrecords/download/${record._id}`}
                   className="text-blue-600 hover:underline"
                 >
                   Download

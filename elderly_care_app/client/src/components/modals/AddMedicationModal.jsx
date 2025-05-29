@@ -22,7 +22,7 @@ export default function AddMedicationModal({ onClose, onAdd }) {
     }
 
     try {
-      const response = await fetch('http://localhost:8000/api/medications', {
+      const response = await fetch('https://elderly-care-app.onrender.com/api/medications', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',

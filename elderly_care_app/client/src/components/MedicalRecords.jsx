@@ -20,7 +20,7 @@ export default function MedicalRecords() {
 
   // Fetch records from the API when the component adds
   const fetchRecords = () => {
-    fetch("http://localhost:8000/api/medicalrecords/getAllRecords", {
+    fetch("https://elderly-care-app.onrender.com/api/medicalrecords/getAllRecords", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('userToken')}`,
       },
@@ -165,7 +165,7 @@ export default function MedicalRecords() {
               {record.fileUrl && (
                 <div className="mt-2">
                   <a
-                    href={`http://localhost:8000/api/medicalrecords/download/${record._id}`}
+                    href={`https://elderly-care-app.onrender.com/api/medicalrecords/download/${record._id}`}
                     className="download-link"
                     onClick={(e) => e.stopPropagation()}
                   >

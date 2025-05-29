@@ -29,7 +29,7 @@ const AppointmentsModal = ({
     // Fetch users when component mounts
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/contactusers', {
+        const response = await axios.get('https://elderly-care-app.onrender.com/api/contactusers', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('userToken')}`,
           },

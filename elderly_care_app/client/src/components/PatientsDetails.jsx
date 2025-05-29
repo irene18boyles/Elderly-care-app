@@ -26,10 +26,10 @@ export default function PatientsDetails() {
   });
 
   const API_PATIENT_URL =
-    import.meta.env.VITE_PATIENT_URL || "http://localhost:8000/api/patient/getdetails";
+    import.meta.env.VITE_PATIENT_URL || "https://elderly-care-app.onrender.com/api/patient/getdetails";
 
   const API_PATIENT_DETAILS_UPDATE_URL =
-    import.meta.env.VITE_PATIENT_DETAILS_UPDATE_URL || "http://localhost:8000/api/patient/updatedetails";
+    import.meta.env.VITE_PATIENT_DETAILS_UPDATE_URL || "https://elderly-care-app.onrender.com/api/patient/updatedetails";
 
   useEffect(() => {
     const fetchPatient = async () => {

@@ -8,7 +8,7 @@ export function AuthProvider({ children }){
     useEffect(() => {
     const fetchApplications = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/api/mainusers/all-users')
+            const response = await axios.get('https://elderly-care-app.onrender.com/api/mainusers/all-users')
             console.log("Fetched applications:", response.data); //Check this
             
         } catch (error) {

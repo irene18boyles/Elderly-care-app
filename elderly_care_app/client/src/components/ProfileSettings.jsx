@@ -20,8 +20,8 @@ export default function ProfileSettings() {
 const [passwordMessage, setPasswordMessage] = useState("");
 
 
-const API_PROFILE_URL = import.meta.env.VITE_PROFILE_SETTINGS_URL || "http://localhost:8000/api/profilesettings/settings";
-const API_PROFILE_UPDATE_URL = import.meta.env.VITE_PROFILE_UPDATE_URL || "http://localhost:8000/api/profilesettings/updatesettings";
+const API_PROFILE_URL = import.meta.env.VITE_PROFILE_SETTINGS_URL || "https://elderly-care-app.onrender.com/profilesettings/settings";
+const API_PROFILE_UPDATE_URL = import.meta.env.VITE_PROFILE_UPDATE_URL || "https://elderly-care-app.onrender.com/api/profilesettings/updatesettings";
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -107,7 +107,7 @@ const API_PROFILE_UPDATE_URL = import.meta.env.VITE_PROFILE_UPDATE_URL || "http:
     if (!token) throw new Error("No token found, please login.");
 
     await axios.put(
-      "http://localhost:8000/api/profilesettings/changepassword",
+      "https://elderly-care-app.onrender.com/api/profilesettings/changepassword",
       {
         currentPassword: passwords.currentPassword,
         newPassword: passwords.newPassword,
