@@ -1,0 +1,58 @@
+@import "tailwindcss";
+/* @plugin "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json"; */
+
+/* ===================== */
+/*  GLOBAL STYLES COLORS */
+/* ===================== */
+:root {
+  --primary: #30548c;     /* Main Blue */
+  --secondary: #9cb5dd;   /* Soft Blue */
+  --dark: #103c6f;        /* Dark Navy */
+  --medium: #5e7d9e;      /* Muted Blue */
+  --light: #b4bccd;       /* Light Blue */
+  --accent: #445c84;      /* Blue Accent */
+}
+
+/* ===================== */
+/* GLOBAL STYLES BUTTONS */
+/* ===================== */
+button {
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  border-radius: 0.375rem; /* rounded-md */
+  color: white;
+  background-color: var(--primary);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+button:hover {
+  background-color: var(--secondary);
+}
+
+/* =================== */
+/* GLOBAL STYLES MODAL */
+/* =================== */
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ====================== */
+/* GLOBAL STYLES CALENDAR */
+/* ====================== */
+.calendar-day {
+  background-color: white;
+  color: var(--primary);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.calendar-day:hover {
+  background-color: var(--medium);
+  color: var(--secondary);
+}
+
+label {
+  @apply !text-white
+}

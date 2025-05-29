@@ -1,0 +1,73 @@
+@import 'tailwindcss';
+/* SymptomTrackerContainer.css */
+
+.symptom-input-container {
+  @apply p-4 sm:p-6 lg:p-8 max-w-5xl mt-10 mx-auto bg-white rounded-lg shadow-md;
+}
+
+
+.modal-overlay {
+  @apply fixed inset-0 bg-black flex items-center justify-center z-50;
+}
+
+.modal-content {
+  @apply bg-white rounded-lg p-4 sm:p-6 max-w-lg w-full shadow-lg relative;
+}
+
+.input-group {
+  @apply w-full px-4 sm:px-6 lg:px-8;
+}
+.description-button-group {
+  @apply flex flex-col md:flex-row gap-4 w-full mt-4;
+}
+
+.description-button-group input {
+  @apply text-base w-full py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400;
+}
+
+.description-button-group button {
+  @apply bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-300;
+}
+
+.symptom-chart-container {
+  @apply mt-6;
+}
+
+.error-message {
+  @apply text-red-600 font-medium mt-2;
+}
+
+.symptom-item {
+  @apply mb-4 border-b border-gray-200 pb-4;
+}
+
+.delete-btn {
+  @apply mt-2 bg-red-500 text-white rounded px-3 py-1 hover:bg-red-600 transition;
+}
+
+.ai-suggestion-container {
+  @apply mt-6 bg-gray-100 p-4 sm:p-6 rounded-lg shadow-md;
+}
+
+.ai-button {
+  @apply bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition;
+}
+
+.ai-suggestion-box {
+  @apply mt-4 p-4 sm:p-6 bg-white rounded-xl shadow-md text-gray-800 leading-relaxed max-w-none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.ai-suggestion-box ul {
+  @apply list-disc pl-6 mb-2;
+}
+
+.ai-suggestion-box li::marker {
+  color: #3b82f6;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

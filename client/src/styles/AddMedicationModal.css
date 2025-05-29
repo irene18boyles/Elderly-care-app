@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+.modal-overlay {
+  @apply fixed inset-0 bg-black/50 flex justify-center items-center z-50;
+}
+
+.modal-content {
+  @apply bg-white p-6 rounded-2xl shadow-lg w-[90%] max-w-md;
+}
+
+.modal-title {
+  @apply text-xl font-bold mb-4 text-gray-800 text-center;
+}
+
+.modal-input {
+  @apply border border-gray-300 rounded-md w-full p-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.modal-button-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition;
+}
+
+.modal-button-secondary {
+  @apply bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded-md transition;
+}
+
+.modal-actions {
+  @apply flex justify-end gap-3 mt-4;
+}

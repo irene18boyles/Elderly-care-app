@@ -1,0 +1,210 @@
+@import 'tailwindcss';
+
+.userPage-container {
+  @apply p-4 
+         min-h-screen 
+         bg-[var(--background)]
+         w-full 
+         max-w-[100vw] 
+         overflow-x-hidden;
+}
+
+.table-container {
+  @apply w-full 
+         overflow-x-auto 
+         rounded-lg 
+         mt-20 
+         bg-blue-50
+         shadow-md;
+}
+
+.table {
+  @apply w-full 
+         border-collapse 
+         min-w-[750px];
+}
+
+.table-header-row {
+  @apply bg-blue-500;
+}
+
+.table-header-cell {
+  @apply p-4 
+         text-white 
+         font-semibold 
+         text-left 
+         text-sm;
+}
+
+.table-row {
+  @apply border-b 
+         border-blue-100 
+         hover:bg-blue-100 
+         transition-colors;
+}
+
+.table-cell {
+  @apply p-4 
+         text-blue-900 
+         text-sm;
+}
+
+.add-user-button {
+  @apply fixed 
+         top-4 right-4 
+         px-4 py-2 
+         bg-blue-500 
+         text-white 
+         rounded-lg 
+         shadow-lg 
+         hover:bg-blue-600 
+         transition-colors 
+         z-10;
+}
+
+.restriction-cell {
+  @apply flex flex-row 
+         gap-4 
+         items-center 
+         flex-wrap;
+}
+
+.checkbox-label {
+  @apply flex items-center 
+         gap-2 
+         text-gray-900  
+         cursor-pointer 
+         whitespace-nowrap;
+}
+
+.checkbox-input {
+  @apply w-4 h-4 
+         rounded 
+         border-blue-500 
+         accent-blue-500;
+}
+
+.edit-input {
+  @apply w-full 
+         px-2 py-1 
+         bg-white 
+         text-blue-900 
+         rounded 
+         border-2 
+         border-blue-500 
+         focus:outline-none 
+         focus:ring-2 
+         focus:ring-blue-500
+         max-w-[200px];
+}
+
+.actions-cell {
+  @apply flex flex-row 
+         gap-2 
+         flex-wrap;
+}
+
+.action-button {
+  @apply px-3 py-1 
+         rounded 
+         text-white 
+         text-sm 
+         transition-colors 
+         min-w-[80px]
+         text-center;
+}
+
+.action-button-edit {
+  @apply bg-blue-500 
+         hover:bg-blue-600;
+}
+
+.action-button-delete {
+  @apply bg-red-500 
+         hover:bg-red-600;
+}
+
+.action-button-save {
+  @apply bg-green-500 
+         hover:bg-green-600;
+}
+
+.action-button-cancel {
+  @apply bg-gray-500 
+         hover:bg-gray-600;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .table-container {
+    @apply mt-16 
+           -mx-4;
+  }
+
+  .table {
+    @apply min-w-full;
+  }
+
+  .table-row {
+    @apply block 
+           border-b 
+           border-blue-100 
+           p-4;
+  }
+
+  .table-cell {
+    @apply py-2 px-0 
+           border-none 
+           block
+           relative
+           pl-[120px]
+           min-h-[40px]
+           before:content-[attr(data-label)] 
+           before:absolute 
+           before:left-0
+           before:w-[110px]
+           before:font-semibold 
+           before:text-blue-500;
+  }
+
+  .table-header-row {
+    @apply hidden;
+  }
+
+  .restriction-cell {
+    @apply mt-2 
+           pl-0;
+  }
+
+  .actions-cell {
+    @apply mt-4 
+           pl-0 
+           flex-row 
+           gap-2;
+  }
+
+  .action-button {
+    @apply flex-1 
+           max-w-[120px];
+  }
+
+  .edit-input {
+    @apply max-w-full;
+  }
+}
+
+/* Small mobile optimizations */
+@media (max-width: 480px) {
+  .userPage-container {
+    @apply p-3;
+  }
+
+  .table-cell {
+    @apply text-sm;
+  }
+
+  .action-button {
+    @apply px-2 py-1 
+           text-sm;
+  }
+}

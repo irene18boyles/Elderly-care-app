@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+.signupContainer {
+    @apply border-2 border-white rounded-xl p-5 w-150 bg-blue-800/80 backdrop-blur-md shadow-lg 
+}
+
+.signupPageText {
+    @apply text-xl font-bold mb-4 text-center text-white
+}
+
+.elderlyCareText {
+    @apply mb-4 text-white text-center
+}
+
+label {
+    @apply block text-white mb-1
+}
+
+input {
+    @apply w-full p-2 rounded bg-blue-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-400
+}
+
+select {
+    @apply w-full p-2 rounded bg-blue-600 text-white focus:ring-2 focus:ring-blue-400
+}
+
+.loginLink {
+    @apply text-blue-300 underline cursor-pointer
+}
+
+.signupButton {
+    @apply w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded cursor-pointer
+}

@@ -1,0 +1,204 @@
+@import 'tailwindcss';
+
+/* Main container */
+.appointments-container {
+  @apply p-4 sm:p-6 
+         flex flex-col items-center 
+         min-h-screen 
+         bg-[var(--light)];
+}
+
+.appointments-title {
+  @apply text-2xl sm:text-3xl 
+         font-bold 
+         mb-4 sm:mb-6 
+         text-[var(--primary)];
+}
+
+/* Calendar container */
+.calendar-container {
+  @apply w-full max-w-7xl 
+         border-2 rounded-xl 
+         p-3 sm:p-6 
+         bg-white 
+         border-[var(--accent)];
+}
+
+/* Navigation */
+.calendar-nav {
+  @apply flex justify-between items-center 
+         mb-4;
+}
+
+.nav-button {
+  @apply px-3 py-1 sm:px-4 sm:py-2 
+         bg-[var(--accent)] 
+         text-white 
+         rounded-lg 
+         hover:bg-[var(--accent-hover)] 
+         transition-colors;
+}
+
+.current-month {
+  @apply text-xl sm:text-2xl 
+         font-bold 
+         text-[var(--primary)];
+}
+
+/* Days of week header */
+.weekdays-header {
+  @apply grid grid-cols-7 gap-1 sm:gap-2 
+         mb-2 
+         text-center 
+         font-semibold 
+         text-sm sm:text-base 
+         text-[var(--primary)];
+}
+
+/* Calendar grid */
+.calendar-grid {
+  @apply grid grid-cols-7 gap-1 sm:gap-2;
+}
+
+.calendar-day {
+  @apply p-2 sm:p-4 
+         border rounded 
+         min-h-[80px] sm:min-h-[100px] 
+         transition-colors 
+         text-sm sm:text-base;
+}
+
+.calendar-day-empty {
+  @apply border-[var(--accent)] 
+         bg-gray-50;
+}
+
+.calendar-day-active {
+  @apply border-[var(--accent)] 
+         bg-white 
+         text-[var(--primary)] 
+         cursor-pointer 
+         hover:bg-[var(--medium)] 
+         hover:text-[var(--secondary)];
+}
+
+.day-number {
+  @apply font-semibold 
+         mb-1;
+}
+
+.appointments-list {
+  @apply text-xs sm:text-sm 
+         mt-1 
+         max-h-[40px] sm:max-h-[60px] 
+         overflow-y-auto;
+}
+
+.appointment-item {
+  @apply truncate 
+         py-0.5 
+         text-[var(--primary)];
+}
+
+/* Modal styles */
+.modal-overlay {
+  @apply fixed inset-0 
+         bg-black/50
+         flex items-center justify-center 
+         z-50 
+         p-4;
+}
+
+.modal-content {
+  @apply w-full max-w-3xl 
+         bg-white 
+         rounded-lg shadow-lg 
+         p-4 sm:p-6;
+}
+
+.modal-header {
+  @apply flex flex-col sm:flex-row 
+         justify-between 
+         items-start sm:items-center 
+         gap-4 
+         mb-4;
+}
+
+.modal-title {
+  @apply text-xl font-bold 
+         text-[var(--text)];
+}
+
+.add-button {
+  @apply px-4 py-2 
+         bg-[var(--accent)] 
+         text-white 
+         rounded-lg 
+         hover:bg-[var(--accent-hover)] 
+         transition-colors;
+}
+
+.appointment-form {
+  @apply space-y-3 
+         border border-[var(--highlight)] 
+         p-4 
+         rounded 
+         bg-white;
+}
+
+.form-input {
+  @apply w-full 
+         p-2 
+         border rounded 
+         focus:outline-none 
+         focus:ring-2 
+         focus:ring-[var(--accent)];
+}
+
+.appointments-list-modal {
+  @apply mt-4 
+         space-y-2;
+}
+
+.appointment-card {
+  @apply p-3 
+         border rounded 
+         bg-[var(--light)] 
+         flex flex-col sm:flex-row 
+         justify-between 
+         items-start sm:items-center 
+         gap-2;
+}
+
+.appointment-info {
+  @apply flex-1;
+}
+
+.appointment-actions {
+  @apply flex flex-col sm:flex-row 
+         gap-2 
+         w-full sm:w-auto;
+}
+
+/* Removed .action-button base class and merged styles directly */
+.edit-button {
+  @apply px-3 py-1 
+         rounded 
+         text-white 
+         text-sm 
+         w-full sm:w-auto 
+         text-center
+         bg-blue-500 
+         hover:bg-blue-600;
+}
+
+.delete-button {
+  @apply px-3 py-1 
+         rounded 
+         text-white 
+         text-sm 
+         w-full sm:w-auto 
+         text-center
+         bg-red-500 
+         hover:bg-red-600;
+} 

@@ -1,0 +1,58 @@
+/* @import 'tailwindcss';
+@plugin 'flowbite-react/plugin/tailwindcss';
+@source '../../.flowbite-react/class-list.json';
+
+.auth-container {
+  @apply flex justify-center items-center h-screen w-screen bg-blue-200 font-sans;
+}
+
+.auth-wrapper {
+  @apply flex justify-center items-center max-w-4xl w-full;
+}
+
+.login-form {
+  @apply border-2 border-white rounded-xl p-8 w-[600px] h-[440px] bg-blue-800/80 backdrop-blur-md shadow-lg;
+}
+
+.signup-form {
+  @apply border-2 border-white rounded-xl p-8 w-[600px] bg-blue-800/80 backdrop-blur-md shadow-lg;
+}
+
+.auth-title {
+  @apply text-xl font-bold mb-4 text-center text-white;
+}
+
+.auth-subtitle {
+  @apply mb-4 text-white text-center;
+}
+
+.form-group {
+  @apply mb-4;
+}
+
+.form-label {
+  @apply block text-white mb-1;
+}
+
+.form-input {
+  @apply w-full p-2 rounded bg-blue-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-400;
+}
+
+.role-select {
+  @apply w-full p-2 rounded bg-blue-600 text-white focus:ring-2 focus:ring-blue-400;
+}
+
+.toggle-text {
+  @apply mb-4 text-sm text-white text-center;
+}
+
+.toggle-btn {
+  @apply text-blue-300 underline cursor-pointer;
+}
+
+.submit-btn {
+  @apply w-full bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded cursor-pointer;
+}
+.submit-btn-signup {
+  @apply w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded cursor-pointer;
+} */
